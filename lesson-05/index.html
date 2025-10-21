@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- 문자 인코딩 설정 -->
+  <meta charset="UTF-8">
+  <!-- 모바일 대응을 위한 뷰포트 설정 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 페이지 제목 -->
+  <title>Easy Count - 쇼핑 계산기</title>
+</head>
+<body>
+  <!-- 헤더 영역 -->
+  <header>
+    <h1>🛍️ Easy Count - 쇼핑 계산기</h1>
+    <p>할인율과 부가세를 간편하게 계산하세요</p>
+  </header>
+  
+  <!-- 메인 컨텐츠 영역 -->
+  <main class="container">
+    <!-- 할인율 계산기 -->
+    <section class="card">
+      <h2>🏷️ 할인율 계산기</h2>
+      <div class="input-group">
+        <label for="originalPrice">원가</label>
+        <div class="input-with-unit">
+          <input type="number" id="originalPrice" placeholder="100000" min="0">
+          <span class="unit">원</span>
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="discountRate">할인율</label>
+        <div class="input-with-unit">
+          <input type="number" id="discountRate" placeholder="30" min="0" max="100">
+          <span class="unit">%</span>
+        </div>
+      </div>
+      <button id="discountBtn">계산하기</button>
+      <div id="discountResult"></div>
+    </section>
+    
+    <!-- 부가세 계산기 -->
+    <section class="card">
+      <h2>🧾 부가세 계산기</h2>
+      <div class="input-group">
+        <label for="amount">금액</label>
+        <div class="input-with-unit">
+          <input type="number" id="amount" placeholder="100000" min="0">
+          <span class="unit">원</span>
+        </div>
+      </div>
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="vatType" value="exclude" checked>
+          공급가액 (부가세 별도)
+        </label>
+        <label>
+          <input type="radio" name="vatType" value="include">
+          부가세 포함 금액
+        </label>
+      </div>
+      <button id="vatBtn">계산하기</button>
+      <div id="vatResult"></div>
+    </section>
+  </main>
+  
+  <!-- 푸터 영역 -->
+  <footer>
+    <p>© 2025 Easy Count</p>
+  </footer>
+  
+  <!-- Vite는 type="module"을 자동 처리 -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
+
+

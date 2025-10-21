@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- 문자 인코딩 설정 -->
+  <meta charset="UTF-8">
+  <!-- 모바일 대응을 위한 뷰포트 설정 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 페이지 제목 -->
+  <title>💰 연봉 실수령액 계산기</title>
+  <!-- CSS 파일 연결 -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 헤더 영역 -->
+  <header>
+    <h1>💰 연봉 실수령액 계산기</h1>
+    <p>2025년 최신 세율 적용</p>
+  </header>
+  
+  <!-- 메인 컨텐츠 영역 -->
+  <main class="container">
+    <div class="calculator-card">
+      <h2>💼 급여 정보 입력</h2>
+      
+      <!-- 입력 영역 -->
+      <div class="input-section">
+        <!-- 연봉 입력 -->
+        <div class="input-group">
+          <label for="annualSalary">연봉 (세전)</label>
+          <div class="input-with-unit">
+            <input type="number" id="annualSalary" placeholder="50000000" min="0">
+            <span class="unit">원</span>
+          </div>
+        </div>
+        
+        <!-- 부양가족 수 입력 -->
+        <div class="input-group">
+          <label for="dependents">부양가족 수 (본인 포함)</label>
+          <input type="number" id="dependents" value="1" min="1">
+        </div>
+        
+        <!-- 계산 버튼 -->
+        <button id="calculateBtn">실수령액 계산하기</button>
+      </div>
+      
+      <!-- 결과 표시 영역 -->
+      <div id="result"></div>
+    </div>
+  </main>
+  
+  <!-- 푸터 영역 -->
+  <footer>
+    <p>© 2025 연봉 계산기 - 정확한 재무 계획을 위한 도구</p>
+  </footer>
+  
+  <!-- JavaScript 파일 연결 -->
+  <script src="salary.js"></script>
+</body>
+</html>
+
+
