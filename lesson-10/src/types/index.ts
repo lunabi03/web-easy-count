@@ -88,3 +88,27 @@ export interface GPAResult {
   letterGrade: string;
 }
 
+// 전기 요금 계산 타입
+export interface ElectricityTier {
+  range: string;
+  minKwh: number;
+  maxKwh: number;
+  baseCharge: number;
+  unitPrice: number;
+}
+
+export interface ElectricityResult {
+  usage: number;
+  tier: string;
+  baseCharge: number;
+  usageCharge: number;
+  climateCharge: number;
+  subtotal: number;
+  vat: number;
+  fund: number;
+  totalCharge: number;
+  dailyAverage: number;
+  yearlyEstimate: number;
+  averageUnitPrice: number;
+}
+

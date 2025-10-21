@@ -9,7 +9,7 @@ export default function Home() {
       color: 'bg-pink-500'
     },
     {
-      title: '🎂 살아온 날',
+      title: '🎂 살아온 날 계산기',
       description: '생년월일로 총 일수 계산',
       href: '/date/birthday',
       color: 'bg-purple-500'
