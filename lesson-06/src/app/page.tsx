@@ -15,6 +15,12 @@ export default function Home() {
       color: 'bg-purple-500'
     },
     {
+      title: '⚡ 전기요금 계산기',
+      description: '월 사용량으로 전기요금 계산',
+      href: '/electricity',
+      color: 'bg-yellow-500'
+    },
+    {
       title: '💰 연봉 계산기',
       description: '4대보험, 세금 제외 실수령액',
       href: '/salary',
