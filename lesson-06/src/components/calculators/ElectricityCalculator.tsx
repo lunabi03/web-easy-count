@@ -10,8 +10,10 @@ export default function ElectricityCalculator() {
   const [tips, setTips] = useState<string[]>([]);
 
   const handleCalculate = () => {
-    const kwh = parseInt(usage);
-    if (isNaN(kwh) || kwh < 0) {
+    // 숫자만 허용 (텍스트 입력 시 숫자만 추출)
+    const normalized = usage.replace(/[^0-9]/g, '');
+    const kwh = parseInt(normalized, 10);
+    if (!normalized || isNaN(kwh) || kwh < 0) {
       alert('사용량을 올바르게 입력해주세요 (0 이상 정수).');
       return;
     }
@@ -24,17 +26,18 @@ export default function ElectricityCalculator() {
     <div className="max-w-3xl mx-auto">
       <div className="bg-white rounded-2xl shadow-lg p-8">
         <div className="mb-6">
-          <label className="block text-gray-700 font-medium mb-2">월 사용량 (kWh)</label>
+          <label className="block text-gray-900 font-medium mb-2">월 사용량 (kWh)</label>
           <div className="flex items-center gap-2">
             <input
-              type="number"
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9]*"
               value={usage}
               onChange={(e) => setUsage(e.target.value)}
               placeholder="350"
-              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              min={0}
+              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900 placeholder-gray-400"
             />
-            <span className="text-gray-600 font-medium">kWh</span>
+            <span className="text-gray-800 font-medium">kWh</span>
           </div>
         </div>
 
