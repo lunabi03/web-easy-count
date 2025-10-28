@@ -10,6 +10,7 @@ export default function Navigation() {
     { href: '/', label: '홈' },
     { href: '/date/dday', label: '디데이' },
     { href: '/date/birthday', label: '생일' },
+    { href: '/electricity', label: '전기요금' },
     { href: '/salary', label: '연봉' },
     { href: '/shopping', label: '쇼핑' },
   ];

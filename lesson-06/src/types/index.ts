@@ -59,4 +59,28 @@ export interface VATResult {
   vatRate: number;
 }
 
+// 전기 요금 계산 타입
+export interface ElectricityTier {
+  range: string; // 요금 구간 라벨
+  minKwh: number; // 최소 사용량
+  maxKwh: number; // 최대 사용량 (무한대 가능)
+  baseCharge: number; // 기본요금(원)
+  unitPrice: number; // kWh당 단가(원)
+}
+
+export interface ElectricityResult {
+  usage: number; // 사용량(kWh)
+  tier: string; // 적용 구간
+  baseCharge: number; // 기본요금
+  usageCharge: number; // 전력량 요금
+  climateCharge: number; // 기후환경요금
+  subtotal: number; // 부가세/기금 이전 합계
+  vat: number; // 부가가치세
+  fund: number; // 전력산업기반기금
+  totalCharge: number; // 최종 청구금액
+  dailyAverage: number; // 일평균 비용(30일 기준)
+  yearlyEstimate: number; // 연간 추정 비용
+  averageUnitPrice: number; // kWh당 평균 단가
+}
+
 
